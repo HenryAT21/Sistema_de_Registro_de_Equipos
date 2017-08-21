@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace Reporte_de_Equipos_Fixers
 {
-    public partial class ReporteCliente : Form
+    public partial class frmReporteEstatus : Form
     {
-        public ReporteCliente(string nombre_reporte)
+        public frmReporteEstatus(string nombre_reporte_est)
         {
             InitializeComponent();
-            
-            //Clase de Crystal Report para manejar los datos en el crystalReportViewer
+            TopMost = true;
+
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(nombre_reporte);
-            crystalReportViewer1.ReportSource = cryRpt;
-            crystalReportViewer1.Refresh();
+            cryRpt.Load(nombre_reporte_est);
+            crystalReportEstado.ReportSource = cryRpt;
+            crystalReportEstado.Refresh();
         }
     }
 }

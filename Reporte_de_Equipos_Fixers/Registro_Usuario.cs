@@ -16,6 +16,7 @@ namespace Reporte_de_Equipos_Fixers
         public frmRegistro_Usuario()
         {
             InitializeComponent();
+            TopMost = true;
         }
 
         private void btnRCrear_Click(object sender, EventArgs e)
@@ -23,20 +24,22 @@ namespace Reporte_de_Equipos_Fixers
             if (txtRPass.Text==txtConfPass.Text)//este if condiciona los textBox de contraseña y confirmación de contraseña para que si los dos coinciden se pueda continuar
             {
                 Operacion oper = new Operacion();//conexón a la base de datos
-                oper.ConsultaSinResultado("INSERT INTO usuario (nombre, pass) VALUES ('" + txtRUsuario.Text + "', '" + txtRPass.Text + "')");
+                oper.ConsultaSinResultado("INSERT INTO usuarios (nombre, pass) VALUES ('" + txtRUsuario.Text + "', '" + txtRPass.Text + "')");
                 //esta consulta agrega al nuevo usuario a la base de datos
+                MessageBox.Show("Usuario creado con exito!", "Creado", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                txtRUsuario.Clear();
+                txtRPass.Clear();
+                txtConfPass.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Las contraseña no coincide", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();//este botón es para cerrar el formulario
-        }
-
-        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
-        {//este botón muestra la ventana de registrar nuevo empleado
-            frmRegistrar_Empleado fr = new frmRegistrar_Empleado();
-            fr.Show();
         }
     }
 }

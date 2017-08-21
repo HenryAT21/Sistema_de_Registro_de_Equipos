@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Reporte_de_Equipos_Fixers
 {
-    public partial class frmReporteCompleto : Form
+    public partial class frmBuscarOrdenes : Form
     {
-        public frmReporteCompleto()
+        public frmBuscarOrdenes()
         {
             InitializeComponent();
         }
@@ -94,28 +94,6 @@ namespace Reporte_de_Equipos_Fixers
                 DataTable dt = oper.ConsultaConResultado("SELECT * FROM reporte_completo WHERE marca_modelo like '%" + txtBuscar.Text.Trim() + "%' ");
                 dataGridReporte.DataSource = dt;
                 return;
-            }
-        }
-
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-            try //manejador de errores
-            {
-                Operacion oper = new Operacion();
-                DataSet ds = new DataSet();
-                //para mostrar el reporte de los empleados en el crystalReportViewer
-                DataTable dt_cliente = oper.ConsultaConResultado("SELECT * FROM REPORTE_COMPLETO");//esta es una consulta a una vista creada en la base de datos
-                ds.Tables.Add(dt_cliente);
-                ds.Tables[0].TableName = "REPORTE_COMPLETO";
-
-                ds.WriteXml(@"C:\sistema\xml\Reporte Fixers\REPORTE_COMPLETO.xml");
-                ReporteCliente fr = new ReporteCliente("CrystalReportFixers.rpt");//al abrir el formulario ReporteCliente se cargará con lo que esta indicado en parentesis que este caso es CrystalReportFixers.rpt
-                fr.Show();
-            }
-            catch (Exception error)
-            {
-                //para mostrar un mensaje de error en caso de que suceda
-                MessageBox.Show(error.Message);
             }
         }
     }

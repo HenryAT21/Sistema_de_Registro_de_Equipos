@@ -37,19 +37,22 @@
             this.txtConfPass = new System.Windows.Forms.TextBox();
             this.btnRCrear = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtRUsuario
             // 
-            this.txtRUsuario.Location = new System.Drawing.Point(79, 48);
+            this.txtRUsuario.Location = new System.Drawing.Point(85, 23);
             this.txtRUsuario.Name = "txtRUsuario";
             this.txtRUsuario.Size = new System.Drawing.Size(126, 20);
             this.txtRUsuario.TabIndex = 1;
             // 
             // txtRPass
             // 
-            this.txtRPass.Location = new System.Drawing.Point(79, 90);
+            this.txtRPass.Location = new System.Drawing.Point(85, 65);
             this.txtRPass.Name = "txtRPass";
             this.txtRPass.PasswordChar = '•';
             this.txtRPass.Size = new System.Drawing.Size(126, 20);
@@ -59,7 +62,7 @@
             // 
             this.lblRPass.AutoSize = true;
             this.lblRPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblRPass.Location = new System.Drawing.Point(12, 93);
+            this.lblRPass.Location = new System.Drawing.Point(18, 68);
             this.lblRPass.Name = "lblRPass";
             this.lblRPass.Size = new System.Drawing.Size(61, 13);
             this.lblRPass.TabIndex = 11;
@@ -69,7 +72,7 @@
             // 
             this.lblRUsuario.AutoSize = true;
             this.lblRUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblRUsuario.Location = new System.Drawing.Point(12, 51);
+            this.lblRUsuario.Location = new System.Drawing.Point(18, 26);
             this.lblRUsuario.Name = "lblRUsuario";
             this.lblRUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblRUsuario.TabIndex = 10;
@@ -88,7 +91,7 @@
             // lblConfPass
             // 
             this.lblConfPass.AutoSize = true;
-            this.lblConfPass.Location = new System.Drawing.Point(12, 135);
+            this.lblConfPass.Location = new System.Drawing.Point(18, 110);
             this.lblConfPass.Name = "lblConfPass";
             this.lblConfPass.Size = new System.Drawing.Size(108, 13);
             this.lblConfPass.TabIndex = 15;
@@ -96,7 +99,7 @@
             // 
             // txtConfPass
             // 
-            this.txtConfPass.Location = new System.Drawing.Point(126, 132);
+            this.txtConfPass.Location = new System.Drawing.Point(132, 107);
             this.txtConfPass.Name = "txtConfPass";
             this.txtConfPass.PasswordChar = '•';
             this.txtConfPass.Size = new System.Drawing.Size(126, 20);
@@ -104,7 +107,7 @@
             // 
             // btnRCrear
             // 
-            this.btnRCrear.Location = new System.Drawing.Point(15, 213);
+            this.btnRCrear.Location = new System.Drawing.Point(10, 19);
             this.btnRCrear.Name = "btnRCrear";
             this.btnRCrear.Size = new System.Drawing.Size(75, 23);
             this.btnRCrear.TabIndex = 4;
@@ -114,7 +117,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(111, 213);
+            this.btnCancelar.Location = new System.Drawing.Point(151, 19);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -122,34 +125,51 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnRegistrarEmpleado
+            // groupBox1
             // 
-            this.btnRegistrarEmpleado.Location = new System.Drawing.Point(206, 213);
-            this.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado";
-            this.btnRegistrarEmpleado.Size = new System.Drawing.Size(124, 23);
-            this.btnRegistrarEmpleado.TabIndex = 6;
-            this.btnRegistrarEmpleado.Text = "Registrar Empleado";
-            this.btnRegistrarEmpleado.UseVisualStyleBackColor = true;
-            this.btnRegistrarEmpleado.Click += new System.EventHandler(this.btnRegistrarEmpleado_Click);
+            this.groupBox1.Controls.Add(this.lblRUsuario);
+            this.groupBox1.Controls.Add(this.lblRPass);
+            this.groupBox1.Controls.Add(this.txtRPass);
+            this.groupBox1.Controls.Add(this.txtConfPass);
+            this.groupBox1.Controls.Add(this.txtRUsuario);
+            this.groupBox1.Controls.Add(this.lblConfPass);
+            this.groupBox1.Location = new System.Drawing.Point(12, 29);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(270, 144);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnRCrear);
+            this.groupBox2.Controls.Add(this.btnCancelar);
+            this.groupBox2.Location = new System.Drawing.Point(15, 179);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(237, 56);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
             // 
             // frmRegistro_Usuario
             // 
+            this.AcceptButton = this.btnRCrear;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 269);
-            this.Controls.Add(this.btnRegistrarEmpleado);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnRCrear);
-            this.Controls.Add(this.txtConfPass);
-            this.Controls.Add(this.lblConfPass);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(294, 256);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtRUsuario);
-            this.Controls.Add(this.txtRPass);
-            this.Controls.Add(this.lblRPass);
-            this.Controls.Add(this.lblRUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRegistro_Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro de Usuario";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +186,7 @@
         private System.Windows.Forms.TextBox txtConfPass;
         private System.Windows.Forms.Button btnRCrear;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnRegistrarEmpleado;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Reporte_de_Equipos_Fixers
 {
-    partial class frmReporteCompleto
+    partial class frmBuscarOrdenes
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.radioBtnCliente = new System.Windows.Forms.RadioButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnReport = new System.Windows.Forms.Button();
             this.radioBtnTecnico = new System.Windows.Forms.RadioButton();
             this.radioBtnEstatus = new System.Windows.Forms.RadioButton();
             this.radioBtnEquipo = new System.Windows.Forms.RadioButton();
@@ -63,7 +62,7 @@
             this.radioBtnCliente.Location = new System.Drawing.Point(12, 22);
             this.radioBtnCliente.Name = "radioBtnCliente";
             this.radioBtnCliente.Size = new System.Drawing.Size(57, 17);
-            this.radioBtnCliente.TabIndex = 0;
+            this.radioBtnCliente.TabIndex = 2;
             this.radioBtnCliente.TabStop = true;
             this.radioBtnCliente.Text = "Cliente";
             this.radioBtnCliente.UseVisualStyleBackColor = true;
@@ -76,23 +75,13 @@
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // btnReport
-            // 
-            this.btnReport.Location = new System.Drawing.Point(660, 19);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(112, 23);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.Text = "Mostrar Reporte";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
             // radioBtnTecnico
             // 
             this.radioBtnTecnico.AutoSize = true;
             this.radioBtnTecnico.Location = new System.Drawing.Point(75, 22);
             this.radioBtnTecnico.Name = "radioBtnTecnico";
             this.radioBtnTecnico.Size = new System.Drawing.Size(64, 17);
-            this.radioBtnTecnico.TabIndex = 0;
+            this.radioBtnTecnico.TabIndex = 3;
             this.radioBtnTecnico.TabStop = true;
             this.radioBtnTecnico.Text = "Tecnico";
             this.radioBtnTecnico.UseVisualStyleBackColor = true;
@@ -103,7 +92,7 @@
             this.radioBtnEstatus.Location = new System.Drawing.Point(145, 22);
             this.radioBtnEstatus.Name = "radioBtnEstatus";
             this.radioBtnEstatus.Size = new System.Drawing.Size(60, 17);
-            this.radioBtnEstatus.TabIndex = 0;
+            this.radioBtnEstatus.TabIndex = 4;
             this.radioBtnEstatus.TabStop = true;
             this.radioBtnEstatus.Text = "Estatus";
             this.radioBtnEstatus.UseVisualStyleBackColor = true;
@@ -114,27 +103,30 @@
             this.radioBtnEquipo.Location = new System.Drawing.Point(211, 22);
             this.radioBtnEquipo.Name = "radioBtnEquipo";
             this.radioBtnEquipo.Size = new System.Drawing.Size(58, 17);
-            this.radioBtnEquipo.TabIndex = 0;
+            this.radioBtnEquipo.TabIndex = 5;
             this.radioBtnEquipo.TabStop = true;
             this.radioBtnEquipo.Text = "Equipo";
             this.radioBtnEquipo.UseVisualStyleBackColor = true;
             // 
-            // frmReporteCompleto
+            // frmBuscarOrdenes
             // 
+            this.AcceptButton = this.btnBuscar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(782, 346);
             this.Controls.Add(this.radioBtnEquipo);
             this.Controls.Add(this.radioBtnEstatus);
             this.Controls.Add(this.radioBtnTecnico);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.radioBtnCliente);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dataGridReporte);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "frmReporteCompleto";
-            this.Text = "Reporte Completo";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "frmBuscarOrdenes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Busqueda de Ordenes";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +139,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton radioBtnCliente;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.RadioButton radioBtnTecnico;
         private System.Windows.Forms.RadioButton radioBtnEstatus;
         private System.Windows.Forms.RadioButton radioBtnEquipo;

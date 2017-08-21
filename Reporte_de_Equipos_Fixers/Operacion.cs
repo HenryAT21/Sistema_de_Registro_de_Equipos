@@ -76,7 +76,6 @@ namespace CRUD
                 cnx.Close();
             }
             return dt;
-
         }
     }
 }
